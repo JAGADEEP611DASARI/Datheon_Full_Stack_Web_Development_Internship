@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal developer portfolio showcasing projects, skills, and contact information.">
+  <title>Developer Portfolio | Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Home"><span class="brand-mark">D</span><span>dev<span class="accent">folio</span></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch color theme" title="Toggle light/dark theme">☾</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> AVAILABLE FOR OPPORTUNITIES</p>
+        <h1>Building digital<br>experiences that <span class="gradient-text">matter.</span></h1>
+        <p class="hero-description">Hi, I'm <strong>Your Name</strong> — a developer who turns ideas into accessible, thoughtful, and useful web experiences.</p>
+        <div class="hero-actions"><a class="button primary" href="#projects">Explore my work <span>↗</span></a><a class="button secondary" href="#contact">Let's connect</a></div>
+        <div class="social-links"><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="mailto:hello@example.com">Email ↗</a></div>
+      </div>
+      <div class="hero-art" aria-label="Decorative developer illustration">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="code-window"><div class="window-bar"><span></span><span></span><span></span><small>developer.js</small></div>
+          <div class="code-lines"><p><span class="line-no">01</span> <span class="purple">const</span> developer = {</p><p><span class="line-no">02</span> &nbsp; name: <span class="green">'Your Name'</span>,</p><p><span class="line-no">03</span> &nbsp; role: <span class="green">'Full-stack dev'</span>,</p><p><span class="line-no">04</span> &nbsp; curious: <span class="orange">true</span>,</p><p><span class="line-no">05</span> &nbsp; building: <span class="blue">'the future'</span></p><p><span class="line-no">06</span> };</p><p class="cursor-line"><span class="line-no">07</span> <span class="purple">console</span>.log(developer);<span class="cursor"></span></p></div>
+        </div><div class="floating-chip chip-top">✳ Clean code</div><div class="floating-chip chip-bottom">⌘ Creative thinking</div><div class="hero-glow"></div>
+      </div>
+      <a class="scroll-cue" href="#about"><span></span> SCROLL TO EXPLORE</a>
+    </section>
+
+    <section class="section container" id="about">
+      <div class="section-heading"><p class="eyebrow">01 / A LITTLE ABOUT ME</p><h2>Curious mind. <span class="muted-heading">Practical builder.</span></h2></div>
+      <div class="about-grid"><div class="about-intro"><p class="large-copy">I enjoy solving real problems with simple, reliable technology.</p><p>I'm a developer focused on creating responsive web applications and learning how great products are designed, built, and shipped. I care about user experience, maintainable code, and continuous improvement.</p><a class="text-link" href="assets/resume.pdf" download>Download résumé <span>↓</span></a></div>
+        <div class="about-stats"><div class="stat-card"><span class="stat-icon">⌘</span><strong>Build</strong><p>From first sketch to working product.</p></div><div class="stat-card"><span class="stat-icon">✦</span><strong>Learn</strong><p>Always exploring better tools and ideas.</p></div><div class="stat-card"><span class="stat-icon">◎</span><strong>Improve</strong><p>Thoughtful details, tested and refined.</p></div><div class="stat-card"><span class="stat-icon">↗</span><strong>Deliver</strong><p>Useful outcomes, not just lines of code.</p></div></div></div>
+    </section>
+
+    <section class="section skills-section" id="skills"><div class="container">
+      <div class="section-heading"><p class="eyebrow">02 / MY TOOLKIT</p><h2>Skills & <span class="muted-heading">technologies.</span></h2><p class="section-subtitle">The tools I use to bring ideas to life — and the ones I'm exploring next.</p></div>
+      <div class="skills-grid"><article class="skill-card"><div class="skill-icon orange-bg">⌘</div><h3>Frontend</h3><p>Building clean, responsive interfaces.</p><div class="tag-list"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span></div></article>
+      <article class="skill-card"><div class="skill-icon purple-bg">⟨/⟩</div><h3>Backend</h3><p>Creating APIs and application logic.</p><div class="tag-list"><span>Node.js</span><span>Express</span><span>Python</span><span>REST APIs</span></div></article>
+      <article class="skill-card"><div class="skill-icon green-bg">▤</div><h3>Data & tools</h3><p>Working with data and developer workflows.</p><div class="tag-list"><span>MongoDB</span><span>Git</span><span>GitHub</span><span>VS Code</span></div></article>
+      <article class="skill-card"><div class="skill-icon blue-bg">◇</div><h3>Deployment</h3><p>Getting projects ready for the real world.</p><div class="tag-list"><span>Vercel</span><span>Netlify</span><span>GitHub Pages</span><span>Responsive UI</span></div></article></div>
+    </div></section>
+
+    <section class="section container" id="projects">
+      <div class="section-heading project-heading"><div><p class="eyebrow">03 / SELECTED WORK</p><h2>Things I've <span class="muted-heading">made.</span></h2></div><p class="section-subtitle">A few sample projects. Replace these with your own work and repository links.</p></div>
+      <div class="projects-grid">
+        <article class="project-card"><div class="project-visual visual-one"><div class="mock-dashboard"><div class="mock-sidebar"></div><div class="mock-content"><i></i><i></i><div class="mock-chart"></div><div class="mock-cards"><b></b><b></b><b></b></div></div></div><span class="project-number">01</span></div><div class="project-info"><div class="project-meta"><span>FULL-STACK</span><span>2026</span></div><h3>Smart Attendance System</h3><p>A dashboard concept for managing student attendance and session records.</p><div class="tag-list"><span>React</span><span>Node.js</span><span>MongoDB</span></div><button class="project-link" data-project="attendance">View details <span>↗</span></button></div></article>
+        <article class="project-card"><div class="project-visual visual-two"><div class="finance-ui"><span>MONTHLY OVERVIEW</span><strong>₹ 24,850</strong><div class="finance-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="finance-row"></div><div class="finance-row short"></div></div><span class="project-number">02</span></div><div class="project-info"><div class="project-meta"><span>WEB APPLICATION</span><span>2026</span></div><h3>Expense Tracker</h3><p>A simple interface to record expenses, categorize spending, and review monthly totals.</p><div class="tag-list"><span>JavaScript</span><span>CSS Grid</span><span>LocalStorage</span></div><button class="project-link" data-project="expense">View details <span>↗</span></button></div></article>
+        <article class="project-card"><div class="project-visual visual-three"><div class="portfolio-ui"><span class="portfolio-pill">PERSONAL BRAND</span><b>Ideas into<br><em>experiences.</em></b><div class="portfolio-line"></div><div class="portfolio-dot"></div></div><span class="project-number">03</span></div><div class="project-info"><div class="project-meta"><span>FRONTEND</span><span>2026</span></div><h3>Personal Portfolio</h3><p>A responsive portfolio focused on accessibility, smooth navigation, and a clear project story.</p><div class="tag-list"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div><button class="project-link" data-project="portfolio">View details <span>↗</span></button></div></article>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact"><div class="container contact-inner"><p class="eyebrow">04 / WHAT'S NEXT?</p><h2>Have a project in mind?<br><span class="gradient-text">Let's make it real.</span></h2><p>I'm always happy to talk about ideas, collaboration, or opportunities.</p><a class="button primary" href="mailto:hello@example.com">hello@example.com <span>↗</span></a><div class="contact-bottom"><span>© <span id="year"></span> Your Name</span><a href="#home">Back to top ↑</a><span>Designed & built with care.</span></div></div></section>
+  </main>
+
+  <div class="modal-backdrop" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden><div class="modal"><button class="modal-close" id="modalClose" aria-label="Close dialog">×</button><p class="eyebrow">PROJECT DETAILS</p><h2 id="modalTitle">Project title</h2><p id="modalDescription"></p><h3>Key features</h3><ul id="modalFeatures"></ul><div class="modal-actions"><a id="modalRepo" class="button primary" href="https://github.com/" target="_blank" rel="noreferrer">Add repository link ↗</a><button class="button secondary" id="modalDone">Close</button></div></div></div>
+</body>
+</html>
