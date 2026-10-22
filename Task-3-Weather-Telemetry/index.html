@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Search global cities for current weather conditions and a five-day forecast.">
+  <title>SkyCast — Weather & Climate Telemetry</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="weather-app">
+    <header class="topbar">
+      <a href="#" class="brand"><span class="brand-mark">☼</span> skycast<span class="brand-dot">.</span></a>
+      <div class="top-note"><span class="live-indicator"></span> LIVE WEATHER TELEMETRY</div>
+      <button id="unitToggle" class="unit-toggle" type="button" aria-label="Switch temperature unit">°C <span>/ °F</span></button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">YOUR WINDOW TO THE WORLD</p>
+          <h1>Weather, wherever<br>you <span>are.</span></h1>
+          <p class="hero-subtitle">Real-time conditions and the forecast ahead, all in one clear view.</p>
+          <form id="searchForm" class="search-form">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <label class="sr-only" for="cityInput">Search a city</label>
+            <input id="cityInput" type="search" placeholder="Search any city in the world..." autocomplete="off" required>
+            <button type="submit" id="searchButton">Search <span>↗</span></button>
+          </form>
+          <div class="search-hint">TRY A CITY <button type="button" class="city-chip" data-city="Tokyo">Tokyo</button><button type="button" class="city-chip" data-city="London">London</button><button type="button" class="city-chip" data-city="New York">New York</button><button type="button" class="city-chip" data-city="Hyderabad">Hyderabad</button></div>
+        </div>
+        <div class="hero-art" aria-hidden="true"><div class="sun-halo"></div><div class="sun"></div><div class="cloud cloud-one"><i></i><i></i><i></i></div><div class="cloud cloud-two"><i></i><i></i><i></i></div><div class="hero-orbit"></div><div class="art-label">ATMOSPHERE <span>01 / 05</span></div></div>
+      </section>
+
+      <section id="weatherSection" class="weather-section" aria-live="polite">
+        <div class="section-title"><div><p class="eyebrow">CURRENT CONDITIONS</p><h2 id="currentHeading">Weather overview</h2></div><p id="updatedAt" class="updated-at">Search a city to begin</p></div>
+        <div id="statusMessage" class="status-message" role="status" hidden></div>
+        <div id="loadingState" class="loading-state" hidden><span class="spinner"></span><span>Gathering weather data...</span></div>
+        <div id="weatherContent" hidden>
+          <article class="current-card">
+            <div class="current-main"><div class="location-line"><span class="location-pin">⌖</span><div><h3 id="cityName">City</h3><p id="cityRegion">Region, Country</p></div></div><div class="current-temp"><strong id="currentTemp">--°</strong><div><span id="conditionText">Conditions</span><small id="feelsLike">Feels like --°</small></div></div><p id="dayDescription" class="day-description">Current weather</p></div>
+            <div class="weather-illustration" id="weatherIllustration"><div class="big-sun"></div><div class="big-cloud"><i></i><i></i><i></i></div><div class="rain-drops" hidden><i></i><i></i><i></i></div></div>
+            <div class="current-foot"><span><span class="live-indicator"></span> LIVE OBSERVATION</span><span id="localTime">Local time</span></div>
+          </article>
+
+          <div class="metrics-grid">
+            <article class="metric-card"><div class="metric-icon humidity-icon">≋</div><span>Humidity</span><strong id="humidity">--%</strong><small>Relative humidity</small></article>
+            <article class="metric-card"><div class="metric-icon wind-icon">↝</div><span>Wind speed</span><strong id="windSpeed">-- km/h</strong><small id="windDirection">Wind conditions</small></article>
+            <article class="metric-card"><div class="metric-icon pressure-icon">◉</div><span>Pressure</span><strong id="pressure">-- hPa</strong><small>Atmospheric pressure</small></article>
+            <article class="metric-card"><div class="metric-icon uv-icon">☼</div><span>Wind gusts</span><strong id="windGusts">-- km/h</strong><small>Peak gust speed</small></article>
+          </div>
+
+          <section class="forecast-section"><div class="forecast-heading"><div><p class="eyebrow">PLAN AHEAD</p><h2>5-day forecast</h2></div><span class="forecast-caption">Daily outlook</span></div><div class="forecast-grid" id="forecastGrid"></div></section>
+          <p class="data-credit">Weather data provided by <a href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open-Meteo</a>. Forecasts are estimates and may change.</p>
+        </div>
+        <div id="welcomeState" class="welcome-state"><div class="welcome-icon">☼</div><h3>Your forecast starts here.</h3><p>Search for a city above to explore its current conditions and the next five days.</p></div>
+      </section>
+    </main>
+    <footer class="footer"><span>SKYCAST © <span id="year"></span></span><span>Built for curious minds <b>✦</b></span></footer>
+  </div>
+</body>
+</html>
